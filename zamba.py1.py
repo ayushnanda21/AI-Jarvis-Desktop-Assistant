@@ -2,6 +2,8 @@ import pyttsx3
 import datetime #for wish me
 import speech_recognition as sr #for taking input from user
 import wikipedia
+import webbrowser
+import os
 
 #Initialized voices to be used 
 engine =pyttsx3.init('sapi5')
@@ -63,3 +65,21 @@ if __name__=="__main__":   #main function
             query=query.replace("wikipedia","")
             results=wikipedia.summary(query, sentences=2)
             speak("According to wikipedia")
+            speak(results)
+
+        elif 'open youtube' in query:
+            webbrowser.open("youtube.com")
+
+        elif 'open google' in query:
+            webbrowser.open("google.com")
+
+        elif 'open stackoverflow' in query:
+            webbrowser.open("stackoverflow.com")
+
+        elif 'open github' in query:
+            webbrowser.open("github.com")
+
+        elif 'open linkdin' in query:
+            webbrowser.open("linkdin.com")
+
+        elif 'play music' in query:
