@@ -83,3 +83,7 @@ if __name__=="__main__":   #main function
             webbrowser.open("linkdin.com")
 
         elif 'play music' in query:
+            music_dir ='F:\\Songs'
+            songs=os.listdir(music_dir)
+            print(songs)
+            os.startfile(os.path.join(music_dir,songs[0]))
