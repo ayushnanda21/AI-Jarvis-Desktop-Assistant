@@ -60,14 +60,14 @@ if __name__=="__main__":   #main function
 
 
 #tasks logic
-        if 'wikipedia' in query:
+        if 'wikipedia' in query:   #surfing wikipedia conditions
             speak('Searching...')
             query=query.replace("wikipedia","")
             results=wikipedia.summary(query, sentences=2)
             speak("According to wikipedia")
             speak(results)
 
-        elif 'open youtube' in query:
+        elif 'open youtube' in query:      
             webbrowser.open("youtube.com")
 
         elif 'open google' in query:
@@ -82,8 +82,16 @@ if __name__=="__main__":   #main function
         elif 'open linkdin' in query:
             webbrowser.open("linkdin.com")
 
-        elif 'play music' in query:
+        elif 'play music' in query:       #music condition
             music_dir ='F:\\Songs'
             songs=os.listdir(music_dir)
             print(songs)
             os.startfile(os.path.join(music_dir,songs[0]))
+
+        elif 'the time' in query:
+            strTime=datetime.datetime.now().strftime("%H:%M:%S")
+            speak(f"Sir, the time is {strTime}")
+
+        elif 'open visual code studio' in query:
+            codePath ="C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            os.startfile(codePath)
