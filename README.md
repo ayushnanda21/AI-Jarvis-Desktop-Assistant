@@ -42,10 +42,6 @@ Helps in recognition of voice
  6. Import smtlib -Simple Mail Transfer Protocol (SMTP) is a protocol that allows us to send emails and to route emails between mail servers
      ```sh
     import smtlib
-   ```
-
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -63,9 +59,6 @@ Contributions are what make the open source community such an amazing place to b
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
 <!-- CONTACT -->
 
 ## Contact
