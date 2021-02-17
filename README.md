@@ -1,4 +1,3 @@
-# AI-Zamba-Assistant
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -9,6 +8,42 @@ It can send emails on your behalf.It can play music for you.It can do Wikipedia 
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Python3](https://www.python.org/download/releases/3.0/)
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+1. Install pyttx3- A python library that will help us to convert text to speech
+   ```sh
+   pip install pyttsx3
+   ```
+2. Import Sapi5 
+(Microsoft developed speech API)
+Helps in recognition of voice
+   ```sh
+   import Sapi5
+   ```
+3. Enabling microphone input()
+   ```sh
+   pip install speechrecognition
+   ```
+4. Enabling Pyaudio
+   ```sh
+   pip install pipwin
+   pipwin install pyaudio
+   ```
+ 5. Enabling Wikipedia Searches
+   ```sh
+   pip install wikipedia
+   ```
+ 6. Import smtlib -Simple Mail Transfer Protocol (SMTP) is a protocol that allows us to send emails and to route emails between mail servers
+     ```sh
+    import smtlib
+   ```
+
 
 
 <!-- CONTRIBUTING -->
