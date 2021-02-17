@@ -4,6 +4,7 @@ import speech_recognition as sr #for taking input from user
 import wikipedia
 import webbrowser
 import os
+import smtplib
 
 #Initialized voices to be used 
 engine =pyttsx3.init('sapi5')
@@ -51,6 +52,15 @@ def askCommand():
         return "None"
     return query
 
+def sendEmail(to, content):
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.ehlo()
+    server.starttls()
+    server.login('youremail@gmail.com', 'your-password')
+    server.sendmail('youremail@gmail.com', to, content)
+    server.close()
+
+
     
 
 if __name__=="__main__":   #main function
@@ -95,3 +105,14 @@ if __name__=="__main__":   #main function
         elif 'open visual code studio' in query:
             codePath ="C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
+
+        elif 'send email to ayush' in query:
+            try:
+                speak("What you want to send?")
+                content =askCommand()
+                to ="xyz@gmail.com"
+                sendEmail(to, content)
+                speak("Email has been sent sir.")
+            except Exception as e:
+                print(e)
+                speak("Apologies! Not able to send your email.")
